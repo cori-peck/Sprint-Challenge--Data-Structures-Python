@@ -13,4 +13,8 @@ class RingBuffer:
     return self.storage
 
   def get(self):
-    pass
+    buffer_list = []
+    for i in range(len(self.storage)):
+      if self.storage[i] is not None:
+        buffer_list.append(self.storage[i])
+    return buffer_list
